@@ -1,6 +1,6 @@
 {
   "name": "simple-eventer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple events interface",
   "main": "index.js",
   "scripts": {

@@ -19,7 +19,8 @@
     "dispatcher",
     "emitter",
     "interface",
-    "extends"
+    "extends",
+    "es6"
   ],
   "author": "Tomek",
   "license": "ISC",

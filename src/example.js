@@ -1,4 +1,3 @@
-
 import SimpleEventer from './index';
 
 class Example extends SimpleEventer {

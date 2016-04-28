@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified. Try example.\" && exit 1",
-    "build": "babel . -d example --presets es2015 --ignore=node_modules",
-    "example": "npm run build && node example/example.js"
+    "build": "babel src/index.js --out-file index.js --source-maps --presets=es2015",
+    "example": "npm run build && babel src/example.js --out-file example.js --presets=es2015 && node example.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,3 @@
-/**
- * Created by tomekkociolek on 2016-01-20.
- */
-
 export default class SimpleEventer {
 
   constructor() {

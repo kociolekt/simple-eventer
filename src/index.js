@@ -1,5 +1,6 @@
-export default class SimpleEventer {
+let staticEventer = null;
 
+export default class SimpleEventer {
   constructor() {
     this.simpleEventerListeners = {};
   }
@@ -20,7 +21,7 @@ export default class SimpleEventer {
     if (typeof type === 'string') {
       event = {type: type};
     } else {
-      throw new Error('Wrong event type name.');
+      throw new Error('Wrong event name type.');
     }
     if (!event.target) {
       event.target = target;
@@ -46,4 +47,18 @@ export default class SimpleEventer {
       }
     }
   }
+
+  static on(type, listener) {
+    return staticEventer.on(type, listener);
+  }
+
+  static fire(type, target = this) {
+    return staticEventer.fire(type, target);
+  }
+
+  static off(type, listener) {
+    return staticEventer.off(type, listener);
+  }
 }
+
+staticEventer = new SimpleEventer();

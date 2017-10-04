@@ -39,6 +39,24 @@ Bind events to your module.
 // Type: onesecond, Target/Data: 3
 ```
 
+Or use events globally
+```js
+// Bind your event
+let seconds = 0;
+
+setInterval(() => {
+  seconds += 1;
+  this.fire('onesecondGlobal', seconds);
+}, 1000);
+
+SimpleEventer.on('onesecondGlobal', (event) => {
+  console.log(`Type: ${event.type}, Target/Data: ${event.target}`);
+});
+// Type: onesecondGlobal, Target/Data: 1
+// Type: onesecondGlobal, Target/Data: 2
+// Type: onesecondGlobal, Target/Data: 3
+```
+
 ## methods
 Three methods are available.
 

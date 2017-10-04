@@ -41,14 +41,15 @@ Bind events to your module.
 
 Or use events globally
 ```js
-// Bind your event
 let seconds = 0;
 
 setInterval(() => {
   seconds += 1;
-  this.fire('onesecondGlobal', seconds);
+  // Fire your event
+  SimpleEventer.fire('onesecondGlobal', seconds);
 }, 1000);
 
+// Bind your event
 SimpleEventer.on('onesecondGlobal', (event) => {
   console.log(`Type: ${event.type}, Target/Data: ${event.target}`);
 });
